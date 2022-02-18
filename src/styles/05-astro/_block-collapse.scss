@@ -1,0 +1,65 @@
+.ds-block_example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0.2rem;
+    background-color: #fff;
+    margin-top: 1em;
+    border: 1px solid #e4e4e4;
+    border-bottom: 0;
+}
+
+.block-collapse {
+    .card {
+      border-radius: 0;
+      .card-header {
+        min-height: 40px;
+        padding: 7px 25px;
+  
+        button {
+          display: block;
+          background: none;
+          // background-color: rgba(0, 0, 0, 0);
+          border: 0;
+          border-bottom-color: currentcolor;
+          border-bottom-style: none;
+          border-bottom-width: 0px;
+          font-family: inherit;
+          cursor: pointer;
+          font-size: 1em;
+          font-weight: 700;
+          line-height: 1.8462;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          text-align: left;
+  
+          &:after {
+            @include fontello;
+            content: "\E820";
+            display: block;
+            float: right;
+            transition: transform 0.2s;
+            font-size: 1rem;
+            margin-right: 8px;
+          }
+          &[aria-expanded="true"] {
+            &:after {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+  
+      .card-body {
+        padding: 0;
+  
+        pre {
+          margin: 0;
+          border: 0;
+          background: $white;
+        }
+      }
+    }
+  }
+  

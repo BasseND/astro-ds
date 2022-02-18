@@ -1,0 +1,43 @@
+.components_overview {
+    .overview_section {
+        margin-bottom: 3em;
+        .overview_header {
+            h2 {}
+        }
+
+        .overview_content {
+            margin-top: 3.5em;
+            .compo_item {
+                border: 1px solid #d1e1f1;
+                background-color: whitesmoke;
+                margin-bottom: 1.2em;
+
+                &:hover {
+                    box-shadow: 0 6px 16px -8px rgba(0,0,0,.08), 0 9px 28px 0 rgba(0,0,0,.05), 0 12px 48px 16px rgba(0,0,0,.03);
+                }
+                a {
+                    text-decoration: none;
+                }
+                .compo_name {
+                    padding: 10px;
+                    border-bottom: 1px solid #d1e1f1;
+                    h3 {
+                        margin: 0; 
+                        
+                        &::before {
+                            content: none;
+                        }
+                    }
+                }
+
+                .compo_illustration {
+                    padding: 20px;
+                    text-align: center;
+
+                    img {}
+                }
+            }
+        }
+    }
+
+}

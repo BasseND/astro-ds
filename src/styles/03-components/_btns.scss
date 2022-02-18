@@ -1,0 +1,424 @@
+
+    .btn {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      line-height: 1.15;
+      margin-right: 0.625rem;
+      margin-top: .25rem;
+      margin-bottom: .25rem;
+      border: 2px solid transparent;
+      white-space: normal;
+      border-radius: 6px;
+      padding: 0.9em 2em;
+      text-decoration: none;
+
+      border: 2px solid transparent;
+    
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: .25rem;
+      margin-top: .25rem;
+      overflow: hidden;
+      padding: 0.9em 2em;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      user-select: none;
+      vertical-align: top;
+      white-space: normal;
+    
+      @include mq-max($tablet-medium - 1) {
+        margin-bottom: 0.625rem;
+      }
+    
+      // Button color bg
+      &.btn-grey-solid,
+      &.btn-black-outline,
+      &.btn-black-solid,
+      &.btn-blue-outline,
+      &.btn-white-outline,
+      &.btn-teal-solid,
+      &.btn-blue-solid,
+      &.btn-red-solid,
+      &.btn-red-outline,
+      &.btn-green-solid,
+      &.btn-green-outline {
+        position: relative;
+      }
+    
+      // Button Solid
+      &.btn-teal-solid {
+        background: $teal-3;
+        color: $white;
+        border-color: $teal-3;
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            background: $white;
+            color: $teal-3;
+            border-color: $white;
+          }
+        }
+      }
+  
+   
+        &.btn-grey-solid {
+          background: $grey-text;
+          color: $white;
+          border-color: $grey-text;
+          &:not([disabled]):not(.disabled) {
+            &:focus,
+            &:hover,
+            &:active {
+              background: #516174;;
+              color: $white;
+              border-color: #516174;;
+            }
+          }
+        }
+
+        &.btn-grey-outline {
+            background-color: transparent;
+            color:  $grey-text;
+            border-color:  $grey-text;
+          &:not([disabled]):not(.disabled) {
+            &:focus,
+            &:hover,
+            &:active {
+              background-color: $grey-text;
+              color: $white;
+              border: 2px solid  $grey-text;
+            }
+          }
+
+        }
+
+       &.btn-green-solid {
+         background: $green-1;
+         color: $white;
+         &:not([disabled]):not(.disabled) {
+           &:focus,
+           &:hover,
+           &:active {
+             color: $green-1;
+             background-color: $white;
+             border-color: $green-1;
+    
+           }
+         }
+       }
+
+       &.btn-green-outline {
+          background-color: transparent;
+          color: $green-1;
+          border-color:  $green-1;
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            background-color: $green-1;
+            color: $white;
+            border: 2px solid  $green-1;
+          }
+        }
+      }
+
+    
+       &.btn-red-solid {
+         background: $red-2;
+         color: $white;
+         &:not([disabled]):not(.disabled) {
+           &:focus,
+           &:hover,
+           &:active {
+             color: $red-2;
+             background-color: $white;
+             border-color: $red-2;
+    
+           }
+         }
+       }
+
+       &.btn-red-outline {
+        background-color: transparent;
+        color: $red-2;
+        border-color:  $red-2;
+
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            background-color: $red-2;
+            color: $white;
+            border: 2px solid  $red-2;
+   
+          }
+        }
+      }
+
+    
+      &.btn-teal-solid {
+        background: $teal-3;
+        color: $white;
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            color: $teal-3;
+            background-color: $white;
+            border-color: $teal-3;
+          }
+        }
+      }
+  
+      &.btn-black-solid {
+        background: $black;
+        color: $white;
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            color: $black;
+            background-color: $white;
+            border-color: $black;
+          }
+        }
+      }
+  
+    
+      &.btn-blue-solid {
+        background: $blue-1;
+        color: $white;
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            color: $blue-1;
+            background-color: $white;
+            border-color: $blue-1;
+    
+          }
+        }
+      }
+    
+      &.btn-blue-outline {
+        background-color: transparent;
+        color:  $blue-1;
+        border-color:  $blue-1;
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            background-color: $blue-1;
+            color: $white;
+            border: 2px solid  $blue-1;
+          }
+        }
+      }
+       &.btn-teal-outline {
+         background-color: transparent;
+         color: $teal-3;
+         border-color: $teal-3;
+    
+         &:not([disabled]):not(.disabled) {
+    
+           &:focus,
+           &:hover,
+           &:active {
+             background-color: $teal-3;
+             color: $white;
+             border: 2px solid $teal-3;
+           }
+         }
+       }
+  
+       &.btn-black-outline {
+        background-color: transparent;
+        color: $black;
+        border-color: $black;
+   
+        &:not([disabled]):not(.disabled) {
+   
+          &:focus,
+          &:hover,
+          &:active {
+            background-color: $black;
+            color: $white;
+            border: 2px solid $black;
+          }
+        }
+      }
+    
+      &.btn-white-outline {
+        color: $teal-3;
+        background-color: $white;
+        border-color: transparent;
+        &:not([disabled]):not(.disabled) {
+          &:focus,
+          &:hover,
+          &:active {
+            background-color: $blue-darken;
+            color: $white;
+            border-color: $white;
+          }
+        }
+      }
+    
+      // Button size
+      &.btn-xtra-small {
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.19px;
+        padding: 0.8em 2em;
+      }
+      &.btn-small {
+        font-size: 0.93rem;
+        font-weight: 600;
+        letter-spacing: 0.19px;
+        padding: 0.6em 2em;
+      }
+    
+      &.btn-medium {
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.19px;
+      }
+    
+      // Button icons
+      &.btn-icon-right {
+        position: relative;
+        &::after {
+           margin-left: 0.4em;
+        }
+      }
+    
+      &.btn-icon-left {
+        position: relative;
+        &::before {
+          margin-right: 0.4em;
+        }
+      }
+    
+      // Button big link
+    
+      &.btn-big-blue-link {
+        color: $white;
+        position: relative;
+        display: block;
+        white-space: normal;
+        text-align: left;
+        line-height: 1.7;
+        border-radius: 70px;
+        background-color: #0053B3;
+        margin-bottom: 1.5em;
+        min-height: 90px;
+        line-height: 52px;
+        padding: 1em 3em 1em 5.5em;
+    
+        @include mq-max($tablet-small) {
+          display: block;
+          text-align: left;
+          padding: 1em 2em 1em 5.5em;
+          border-radius: 0;
+        }
+    
+        &::before {
+          @include fontello;
+          content: "\E82D";
+          content:"\E854";
+          font-weight: 200;
+          margin-left: 0.5em;
+          border-radius: 50%;
+          width: 44px;
+          height: 44px;
+          position: absolute;
+          top: calc(50% - 21px);
+          left: 2px;
+          line-height: 44px;
+          text-align: center;
+          font-size: 3em;
+        }
+        &::after {
+          @include fontello;
+          content: "\E822";
+          font-weight: 500;
+          margin-left: 0.5em;
+          top: calc(50% - 25px);
+          right: 37px;
+          position: absolute;
+          font-size: 1.6em;
+        }
+        &:focus,
+        &:hover,
+        &:active {
+          background-color: $white;
+          color: #0053b2;
+          border: 2px solid #0053b2;
+        }
+      }
+     
+      // Access Rapide Button 
+      &.btn-rapide-access {
+        padding: 1em 2em 1em 5.5em;
+        position: relative;
+        display: block;
+        white-space: normal;
+        text-align: left;
+        line-height: 1.7;
+        border-radius: 70px;
+        background-color: $white;
+        margin-bottom: 1.5em;
+    
+        @include mq-max($tablet-small) {
+          display: block;
+          text-align: left;
+          padding: 1em 2em 1em 5.5em;
+          border-radius: 0;
+        }
+    
+       &::before {
+          @include fontello;
+          content: "\E822";
+          font-size: 1.5em;
+          color: $white;
+          margin-right: 10px;
+          background-color: $red-2;
+          border-radius: 50%;
+          width: 44px;
+          height: 44px;
+          position: absolute;
+          top: calc(50% - 21px);
+          left: 27px;
+          line-height: 44px;
+          text-align: center;
+        }
+        &:focus,
+        &:hover,
+        &:active {
+          background-color: $white;
+          color: #0053b2;
+          border: 2px solid #0053b2;
+        }
+      }
+    
+      // Buttin Disabled
+      &[disabled],
+      &.disabled {
+        cursor: not-allowed;
+        opacity: 0.4;
+      }
+    }
+
+    
+ 

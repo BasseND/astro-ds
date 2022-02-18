@@ -1,0 +1,385 @@
+/**************************************************/
+/******* Element with grey border and radius ******/
+/**************************************************/
+@mixin greyborder-radius {
+    border: 1px solid $grey-border;
+    border-radius: 1px;
+    padding: 3px 8px;
+    background: white;
+}
+
+@mixin reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+}
+
+
+
+//============================================================
+// Fontello Button Icons Helper
+//============================================================
+$fontelloCodesBtn: (
+    icon-ok-circled : '\E800',
+    icon-ok : '\E801',
+    icon-down-circle : '\E802',
+    icon-left-circle : '\E803',
+    icon-right-circle : '\E804',
+    icon-up-circle : '\E805',
+    icon-down-open : '\E806',
+    icon-up-open : '\E807',
+    icon-right-open : '\E808',
+    icon-left-open : '\E809',
+    icon-info : '\E80A',
+    icon-facebook : '\F09A',
+    icon-twitter : '\F099',
+    icon-instagram : '\F16D',
+    icon-user : '\E80B',
+    icon-lock-open-alt : '\F13E',
+    
+    icon-download : '\E80D',
+    icon-chain : '\E80E',
+    icon-external-link :'\E80F',
+    icon-valide : '\E810',
+    icon-recommencer : '\E811',
+    icon-003-envelope :'\E812',
+    icon-icon : '\E813',
+    icon-linkedin : '\F0E1',
+    icon-mail-alt : '\F0E0',
+    icon-rss : '\E814',
+ 
+    
+
+ 
+    icon-bulle: '\E81B',
+    
+    icon-search: '\E81D',
+    icon-cancel: '\E81E',
+    icon-location: '\E81F',
+    icon-menu: '\F0C9',
+    icon-down-open-1: '\E820',
+    icon-left-open-1: '\E821',
+    icon-right-open-1: '\E822',
+    icon-up-open-1: '\E823',
+    icon-address-book-o: '\F2BA',
+    icon-help-circled-alt: '\E824',
+    icon-book: '\E825',
+    icon-book-1: '\E800',
+    icon-youtube-play: '\F16A',
+    icon-erreur: '\E827',
+    icon-attention: '\E82A',
+    icon-circle-empty: '\F10C',
+    icon-dot-circled: '\F192',
+    icon-check: '\E82B',
+    icon-check-empty: '\F096',
+    icon-ok-squared: '\F14A',
+    icon-ok-circled-1: '\F06D',
+    icon-record: '\E82C',
+    icon-compass: '\E82D',
+    icon-double_fleche: '\E912',
+    icon-double_fleche_gauche: '\E92A',
+    icon-columns: '\F0DB',
+    icon-cubes: '\F1B3',
+    icon-window: '\E82E',
+    icon-newspaper: '\E830',
+    icon-archive: '\E82F',
+    icon-box: '\E831',
+    icon-th-large-outline: '\E832',
+    icon-universal-access: '\E833',
+    icon-wheelchair: '\F193',
+    icon-mobile: '\E834',
+    icon-html5: '\F13B',
+    icon-css3: '\F13C',
+    icon-spin6 : '\E839',
+    icon-spin4 : '\E835',
+    icon-spin3 : '\E836',
+    icon-spin5 : '\E838',
+    icon-cube : '\F1B2',
+    icon-github : '\F113',
+    icon-bitbucket : '\F171',
+    icon-attention-filled : '\E837',
+    icon-heart-empty : '\E86F',
+    icon-pencil : '\E815',
+    icon-edit : '\E817',
+    icon-login : '\E80C',
+    icon-eye : '\E4A3',
+    icon-eye-off : '\E75C',
+    icon-mail: '\E81C',
+    icon-mail-1 : '\E843',
+
+    icon-up-open-2 : '\E807',
+    
+
+    
+
+    
+    
+
+    
+    
+    
+  
+);
+@each $name, $glyph in $fontelloCodesBtn {
+    .#{$name}::after {
+        content: $glyph;
+        font-family: fontello;
+        letter-spacing: normal;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        user-select: none;
+    }
+ }
+@each $name, $glyph in $fontelloCodesBtn {
+    .btn-icon-right.btn-#{$name}::after {
+            content: $glyph;
+            font-family: fontello;
+            letter-spacing: normal;
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            user-select: none;
+        }
+    
+    .btn-icon-left.btn-#{$name}::before {
+            content: $glyph;
+            font-family: fontello;
+            letter-spacing: normal;
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            user-select: none;
+        }
+ 
+}
+
+
+//============================================================
+// Fontello
+//============================================================
+
+@mixin fontello {
+    font-family: fontello;
+    letter-spacing: normal;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    user-select: none;
+}
+
+/*
+&:before {
+  @include fontello;
+  content: '\E801';
+  font-size: 15px;
+}
+*/
+
+// CLEARFIX
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Node Bg
+@mixin node-bg {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 700px;
+        background: linear-gradient(0deg, $white 0%, $grey-light-5 100%);
+        z-index: 0;
+    }
+}
+
+@mixin visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+}
+
+@mixin input_submit_btn($textColor, $bgColor) {
+    border: 0;
+    font-size: 1em;
+    color: $textColor;
+    background-color: $bgColor;
+    padding: 1em 2em 1em 3.6em;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    //margin-left: 4.9em;
+}
+
+@mixin input_submit_btn_hover($textColor, $bgColor) {
+    color: $textColor;
+    background-color: $bgColor;
+}
+
+@mixin sourceBeforeStyle {
+    margin-top: 4px;
+    padding-left: 70px;
+    position: relative;
+
+    &:before {
+        content: "";
+        background-color: lighten($grey-legend, 60%);
+        display: inline-block;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        top: 8px;
+        left: 0;
+    }
+}
+
+@mixin label-highlighted {
+    background-color: $red-2;
+    padding: 0.6em 1em;
+    font-size: 1.2em;
+    color: $white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin focus {
+    outline-color: $lavender;
+    outline-offset: -1px;
+    outline-style: auto;
+    outline-width: 2px;
+    border-radius: 50px;
+}
+
+@mixin focusInput {
+    outline-color: $lavender;
+    border-color: $lavender;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+@mixin focusOutline {
+    outline: dotted 1px #ccc;
+    outline-offset: 0.45rem;
+}
+
+@mixin hideInput {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px;
+}
+
+@mixin blue_gradient {
+    background-image: -webkit-linear-gradient(45deg,
+            $blue-gradien-dark,
+            $blue-gradien-light);
+    background-image: -moz-linear-gradient(45deg,
+            $blue-gradien-dark,
+            $blue-gradien-light);
+    background-image: -o-linear-gradient(45deg,
+            $blue-gradien-dark,
+            $blue-gradien-light);
+    background-image: linear-gradient(45deg,
+            $blue-gradien-dark,
+            $blue-gradien-light);
+}
+
+@mixin h3-before {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 2px;
+    background-color: $blue-darken;
+    left: -12px;
+    bottom: -18px;
+}
+
+@mixin form-required-hidden-after {
+    &.form-required {
+        &::after {
+            content: "";
+            background: none;
+        }
+    }
+}
+
+@mixin before-override {
+    &::before {
+        content: "" !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+}
+
+// Pulse Animation
+@mixin pulse-anim {
+
+    &:hover,
+    &:focus {
+        animation: pulse 1s;
+        box-shadow: 0 0 0 2em rgba($white, 0);
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 var(--hover);
+        }
+    }
+}
+
+// Mixin Menu Header
+@mixin focusHover($color:#0053b3, $borderColor:#0053b3, $outline: 4px solid rgba(0, 83, 179, 0.51)) {
+
+    &:focus,
+    &.is-active,
+    &:hover {
+        color: $color;
+        background: none;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: $outline;
+        background: none;
+    }
+}
+
+@mixin overrideVotreAvisCompteBtn($color:#00234c) {
+    background-color: transparent;
+    color: $color;
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+
+//============================================================
+// media query mixin
+//============================================================
+
+@mixin mq($minWhidthSize, $maxWhidthSize) {
+    @media (min-width: $minWhidthSize) and (max-width: $maxWhidthSize) {
+        @content;
+    }
+}
+
+// media query Max Width mixin
+@mixin mq-max($maxWhidthSize) {
+    @media (max-width: $maxWhidthSize) {
+        @content;
+    }
+}
+
+// media query Min Width mixin
+@mixin mq-min($minWhidthSize) {
+    @media (min-width: $minWhidthSize) {
+        @content;
+    }
+}

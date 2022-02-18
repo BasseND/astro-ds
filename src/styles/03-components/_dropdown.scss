@@ -1,0 +1,39 @@
+.ds-dropdown-menu {
+    position: relative;
+
+    .ds-dropdown-ct {
+        position: absolute;
+        left: 0;
+        top: 105%;
+        background-color: $grey-bg;
+        min-width: 200px;
+        box-shadow: 0 1px 6px rgb(173 171 201);
+        border-radius: 5px;
+
+        li {
+
+            a {
+                display: block;
+                padding: 0.8rem 1rem;
+                color: #364251;
+                font-size: 1.1rem;
+                line-height: 1.6;
+                text-decoration: none;
+                transition: all .6s $trans, transform 0s;
+
+                &:hover {
+                    // background-color: #f5f7f6;
+                    // border-radius: 5px;
+                    color: $green-1;
+                }
+
+                .fontello {
+                    margin-right: 10px;
+                }
+            }
+            &:not(:last-child) {
+                border-bottom:1px solid #d9d9d9;
+            }
+        }
+    }
+}

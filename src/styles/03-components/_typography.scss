@@ -1,0 +1,106 @@
+
+    h1,h2,h3,h4,h5,h6 {
+      color: $grey-text; 
+      line-height: 1.5; 
+      margin: 0 0 20px 0;
+      // font-family: $font-2;
+
+      &.heading-underline {
+        margin-bottom: 1.8rem;
+        font-size: 2.5rem;
+
+         &::before {
+          content: "";
+          position: absolute;
+          width: 3rem;
+          height: 2px;
+          background-color: $grey-text;
+          left: 0;
+          bottom: -15px;
+        }
+
+      }
+    }
+    
+    h1,
+    %h1 {
+      font-size: 2.85rem;
+      font-weight: 900;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+
+      &.page-title {
+        margin-bottom: 1em;
+        margin-top: 0;
+      }
+    }
+
+    h2,
+    %h2 {
+     
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      position: relative;
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 3rem;
+      //   height: 2px;
+      //   background-color: #003b81;
+      //   left: 0;
+      //   bottom: -18px;
+      // }
+    }
+
+    h3 {
+     
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 24px;
+      margin-bottom: 1rem;
+      position: relative;
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 3rem;
+      //   height: 2px;
+      //   background-color: #00234c;
+      //   left: -9px;
+      //   bottom: -18px;
+
+
+      // }
+    }
+
+    h4 {
+   
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    h5 {
+     
+      font-size: 1.15rem;
+      font-weight: bold;
+      line-height: 21px;
+    }
+
+    h6 {
+     
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    p,
+    %p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+
+      &.chapo {
+        font-size: 1.3rem;
+      }
+    }

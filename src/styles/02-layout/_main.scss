@@ -1,0 +1,35 @@
+body {
+    font-family: $font-2;
+    color: $grey-text;
+    letter-spacing: normal;
+    font-size: 1.1rem;
+    line-height: 1.15;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    .app {
+        main {
+            min-height: 100%;
+
+            @media (min-width: 992px) {
+                min-height: calc(100vh - 210px);
+            }
+        }
+        
+        .mobile-menu-overlay  {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            background-color: rgba(11,27,52,0.4);
+        }
+    }
+
+    // bg color 
+    .bg-mystic {
+        background-color: $grey-light-5; // #EBEFF3;
+    }   
+}

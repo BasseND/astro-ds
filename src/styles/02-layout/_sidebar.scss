@@ -1,0 +1,103 @@
+
+    .sidebar_container {
+      background-color: #ededf5; // $grey-light-5;
+      border: 1px solid #d5d3e3;
+      border-radius: 8px;
+  
+      @media (max-width: 991px) {
+        margin-bottom: 1em;
+        padding: 0;
+      }
+  
+      .sidebar_main_title {
+       
+        position: relative;
+        padding: 10px 30px;
+        border-radius: 8px 8px 0 0;
+        background-color: #dddce9;
+        border-bottom: 1px solid #d5d3e3;
+      }
+  
+      .sidebar_main_content {
+        padding-left: 1em;
+        padding: 10px 30px;
+  
+        .menu {
+            list-style: none;
+          @media (max-width: 991px) {
+            margin-bottom: 0;
+          }
+  
+          .li-parent {
+            margin-bottom: 5px;
+  
+            a,
+            button {
+              color: $grey-text;
+              display: block;
+              font-size: 1.05rem;
+              font-weight: 600;
+              min-height: 44px;
+              padding: 1em 0.6em 1em 1em;
+              position: relative;
+              transition: all 0.3s ease-in-out;
+              box-sizing: border-box;
+              text-decoration: none;
+  
+              &:hover,
+              &:active,
+              &:focus,
+              &.is-active {
+                background-color: #dddce9;
+                border: 0;
+                border-radius: 8px;
+                margin-bottom: 0;
+              }
+  
+              &:focus {
+                outline-color: $blue-dark;
+                outline-offset: -1px;
+                outline-style: auto;
+                outline-width: 2px;
+              }
+
+              .fontello {
+                  margin-right: 10px;
+              }
+            }
+          }
+  
+         
+        }
+      }
+    }
+  
+    // SIDEBAR_MENU
+  
+  
+    // Responsive Display
+    .sidebar_container {
+      .sidebar_container_header {
+        display: none;
+  
+        // Toggler
+        .profile-navbar-toggler {
+          background: $teal-3;
+          border: 2px solid $teal-3;
+          box-shadow: none;
+          color: $white;
+          font-size: 1rem;
+          font-weight: 600;
+          min-height: 58px;
+          padding: 12px;
+          width: 100%;
+        }
+      }
+  
+     
+    }
+  
+  
+
+  
+ 

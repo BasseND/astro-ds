@@ -1,0 +1,49 @@
+.container {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+    
+    @media (min-width: 1400px) {
+        max-width: 1320px;
+    }
+
+    .container_sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+
+        // @media (min-width: 992px) {
+        //     max-width: 1320px;
+        // }
+        .wrapper-left {
+            width: 30%;
+            margin: 0;
+            padding: 0;
+
+        }
+        .wrapper-right {
+            width: 70%;
+            margin: 0;
+            padding: 0;
+        }
+
+        // .wrp-1 {
+          
+        // }
+        // .wrp-2 {
+            
+        // }
+        // .wrp-3 {
+            
+        // }
+        // .wrp-4 {
+            
+        // }
+        // .wrp-3 {
+            
+        // }
+    }
+}

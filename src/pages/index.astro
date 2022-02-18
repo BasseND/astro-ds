@@ -1,0 +1,100 @@
+---
+// Component Imports
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Tour from '../components/Tour.astro';
+import Btn from '../components/Btn.astro';
+import Components from '../components/Components.astro';
+import Form from '../components/Form.astro'; 
+import Card from '../components/Card.astro'; 
+import Modal from '../components/Modal.astro'; 
+import SidebarMenu from '../components/Sidebar-menu.astro'; 
+
+// You can import components from any supported Framework here!
+
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'My Astro Site';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link lang="scss" rel="stylesheet" href={Astro.resolve('../styles/styles.scss')}>
+	<!-- <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+	<link rel="stylesheet" href={Astro.resolve('../styles/home.css')}> -->
+	<link rel="stylesheet" href="/assets/fonts/fonts.css">
+
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+	<style>
+		header {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			max-width: min(100%, 68ch);
+		}
+	</style>
+</head>
+<body class="main-bg">
+
+	<div class="app">
+		<Header />
+	
+		<main>
+
+			<div class="container">
+				<div class="grids col-3">
+					<div>Content</div>
+					<div>Content</div>
+					<div>Content</div>
+				</div>
+
+				<div class="grids col-1 sm-2 lg-3">
+					<div>Content</div>
+					<div>Content</div>
+					<div>Content</div>
+				</div>
+
+				
+				<!-- <Tour /> -->
+				<Btn />
+				<Components />
+				<Form />
+				<Card /> 
+				<SidebarMenu />
+				<!-- <Modal /> -->
+
+				<!--
+
+				You can also use imported framework components directly in your markup!
+				
+				Note: by default, these components are NOT interactive on the client.
+				The `:visible` directive tells Astro to make it interactive.
+				
+				See https://docs.astro.build/core-concepts/component-hydration/ 
+
+				-->
+
+		    </div>
+
+		</main>
+
+	    <Footer />
+
+    </div>
+
+	<script src="/js/prism.min.js"></script>  
+	<script src="/js/script.js"></script>  
+	<!-- <script src="/assets/js/prism/min.js"></script>  -->
+</body>
+</html>

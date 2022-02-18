@@ -1,0 +1,55 @@
+<div x-data="{ open: false }" class="ds-modal-wrapper">
+    <!-- Button -->
+    <button x-on:click="open = true" 
+            type="button" 
+            class="btn btn-grey-solid  btn-medium">
+        Open dialog
+    </button>
+ 
+    <!-- Modal -->
+    <div
+        x-show="open"
+        x-on:keydown.escape.prevent.stop="open = false"
+        role="dialog"
+        aria-modal="true"
+        x-id="['modal-title']"
+        :aria-labelledby="$id('modal-title')"
+        class="ds-modal"
+    >
+        <!-- Overlay -->
+        <div x-show="open" x-transition.opacity class="ds-modal-overlay relative max-w-2xl w-full bg-white border border-black p-8 overflow-y-aut"></div>
+ 
+        <!-- Panel -->
+        <div
+            x-show="open" x-transition
+            x-on:click="open = false"
+            class="ds-modal-panel"
+        >
+            <div
+                x-on:click.stop
+                x-trap.noscroll.inert="open"
+                class="ds-modal-content ds-modal-large"
+            >
+                <!-- Title -->
+                <h2 class="ds-modal-header" :id="$id('modal-title')">Confirm</h2>
+
+                <!-- Content -->
+                <div class="ds-modal-body">
+                    <p class="mt-2 text-gray-600">Are you sure you want to learn how to create an awesome modal?</p>
+
+                </div>
+
+               
+                <!-- Footer -->
+                <div class="ds-modal-footer">
+                    <button type="button" x-on:click="open = false" class="btn btn-green-outline  btn-medium">
+                        Confirm
+                    </button>
+                    <button type="button" x-on:click="open = false" class="btn btn-red-outline  btn-medium">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

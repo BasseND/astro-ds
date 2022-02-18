@@ -1,0 +1,8 @@
+a {
+    color: $navy;
+    &:focus,
+    &:hover,
+    &:active {
+      color: #3767ce;
+    }
+}

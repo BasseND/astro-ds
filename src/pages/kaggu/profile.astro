@@ -1,0 +1,246 @@
+---
+// Component Imports
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+import Breadcrumb from '../../components/Breadcrumb.astro'; 
+// You can import components from any supported Framework here!
+
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'My Astro Site';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<link lang="scss" rel="stylesheet" href={Astro.resolve('../../styles/styles.scss')}>
+	<!-- <link rel="stylesheet" href={Astro.resolve('../../styles/global.css')}>
+	<link rel="stylesheet" href={Astro.resolve('../../styles/home.css')}> -->
+	<link rel="stylesheet" href="../assets/fonts/fonts.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	
+</head>
+<body class="main-bg">
+
+	<div class="app">
+		<Header />
+	
+		<main>
+
+            <Breadcrumb />
+
+			<div class="container">
+                <section class="mt-50 mb-50 container_750">
+
+            
+                    <div class="ds-card-form-ct  mb-50">
+                        <div class="ds-card-form__header">
+                            <h3 class="ds-card-form__title">Mon profile</h3>
+                        </div>
+                        <div class="ds-card-form__body">
+
+                            <div class="profile__info">
+                                <p><span class="label">Prénom : </span><span class="value">Bassirou</span></p>
+                                <p><span class="label">Nom : </span><span class="value">NDIAYE</span></p>
+                                <p><span class="label">Adresse Email: </span><span class="value">ndiayebasse@test.com</span></p>
+                                <p><span class="label">Téléphone : </span><span class="value">06 00 00 90 98</span></p>
+                            </div> 
+                            <div class="mt-30">
+                                <!-- <a class="btn btn-green-solid  btn-icon-left btn-icon-edit btn-medium" href="#">Mettre à jour</a> -->
+
+                                <!-- MODAL MODIF PROFILE -->
+
+                                <!-- <div x-data="{ open: false }" class="ds-modal-wrapper">
+                                    
+                                    <button x-on:click="open = true" 
+                                            type="button" 
+                                            class="btn btn-green-solid  btn-icon-left btn-icon-edit btn-medium">
+                                            Mettre à jour
+                                    </button>
+                                
+                                  
+                                    <div
+                                        x-show="open"
+                                        x-on:keydown.escape.prevent.stop="open = false"
+                                        role="dialog"
+                                        aria-modal="true"
+                                        x-id="['modal-title']"
+                                        :aria-labelledby="$id('modal-title')"
+                                        class="ds-modal"
+                                    >
+                                       
+                                        <div x-show="open" x-transition.opacity class="ds-modal-overlay"></div>
+                                
+                                       
+                                        <div
+                                            x-show="open" x-transition
+                                            x-on:click="open = false"
+                                            class="ds-modal-panel"
+                                        >
+                                            <div
+                                                x-on:click.stop
+                                                x-trap.noscroll.inert="open"
+                                                class="ds-modal-content ds-modal-large"
+                                            >
+                                               
+                                                <h2 class="ds-modal-header" :id="$id('modal-title')">Confirm</h2>
+                                
+                                             
+                                                <div class="ds-modal-body">
+                                                    <p class="mt-2 text-gray-600">Are you sure you want to learn how to create an awesome modal?</p>
+                                
+                                                </div>
+                                
+                                            
+                                              
+                                                <div class="ds-modal-footer">
+                                                    <button type="button" x-on:click="open = false" class="btn btn-green-outline  btn-medium">
+                                                        Confirm
+                                                    </button>
+                                                    <button type="button" x-on:click="open = false" class="btn btn-red-outline  btn-medium">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <!-- END MODAL MODIF PROFILE -->
+                            </div>
+                          
+                
+                        
+                
+                        </div>
+                       
+                    </div>
+
+                    
+
+
+                    <div class="ds-card-form-ct  mb-50">
+                        <div class="ds-card-form__header">
+                            <h3 class="ds-card-form__title">Mes favoris</h3>
+                        </div>
+                        <div class="ds-card-form__body">
+
+                            <div class="ds-card-h">
+                                <div class="ds-card-row">
+                                    <img src="/assets/images/khassida_cover04.png" alt="">
+                                </div>
+                                <div class="ds-card-row ds-card-info">
+                                    <h3>Nourou Daarayni</h3>
+                                    <p>Cheikhoul Khadim</p>
+                                </div>
+                                <!-- <div class="ds-card-row">
+                        
+                                </div> -->
+                                <div class="ds-card-row ds-card-actions">
+                                   
+                                    <a class="btn btn-grey-solid  btn-icon-left btn-icon-search btn-xtra-small" href="#">Consulter</a>
+                                    <button class="btn btn-green-outline btn-icon-left btn-icon-heart-empty btn-xtra-small"> 
+                                        <!-- <em class="fontello icon-heart-empty" aria-hidden="true"></em> -->
+                                        Favoris
+                                    </button>
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="ds-card-h">
+                                <div class="ds-card-row">
+                                    <img src="/assets/images/khassida_cover02.png" alt="">
+                                </div>
+                                <div class="ds-card-row ds-card-info">
+                                    <h3>Nourou Daarayni</h3>
+                                    <p>Cheikhoul Khadim</p>
+                                </div>
+                                <!-- <div class="ds-card-row">
+                        
+                                </div> -->
+                                <div class="ds-card-row ds-card-actions">
+                                    
+                                    <a class="btn btn-grey-solid  btn-icon-left btn-icon-search btn-xtra-small" href="#">Consulter</a>
+                                    <button class="btn btn-green-outline btn-icon-left btn-icon-heart-empty btn-xtra-small"> 
+                                        <!-- <em class="fontello icon-heart-empty" aria-hidden="true"></em> -->
+                                        Favoris
+                                    </button>
+                                </div>
+                            </div>  
+                            
+                            <div class="ds-card-h">
+                                <div class="ds-card-row">
+                                    <img src="/assets/images/khassida_cover04.png" alt="">
+                                </div>
+                                <div class="ds-card-row ds-card-info">
+                                    <h3>Nourou Daarayni</h3>
+                                    <p>Cheikhoul Khadim</p>
+                                </div>
+                                <!-- <div class="ds-card-row">
+                        
+                                </div> -->
+                                <div class="ds-card-row ds-card-actions">
+                                   
+                                    <a class="btn btn-grey-solid  btn-icon-left btn-icon-search btn-xtra-small" href="#">Consulter</a>
+                                    <button class="btn btn-green-outline btn-icon-left btn-icon-heart-empty btn-xtra-small"> 
+                                        <!-- <em class="fontello icon-heart-empty" aria-hidden="true"></em> -->
+                                        Favoris
+                                    </button>
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="ds-card-h">
+                                <div class="ds-card-row">
+                                    <img src="/assets/images/khassida_cover02.png" alt="">
+                                </div>
+                                <div class="ds-card-row ds-card-info">
+                                    <h3>Nourou Daarayni</h3>
+                                    <p>Cheikhoul Khadim</p>
+                                </div>
+                                <!-- <div class="ds-card-row">
+                        
+                                </div> -->
+                                <div class="ds-card-row ds-card-actions">
+                                    
+                                    <a class="btn btn-grey-solid  btn-icon-left btn-icon-search btn-xtra-small" href="#">Consulter</a>
+                                    <button class="btn btn-green-outline btn-icon-left btn-icon-heart-empty btn-xtra-small"> 
+                                        <!-- <em class="fontello icon-heart-empty" aria-hidden="true"></em> -->
+                                        Favoris
+                                    </button>
+                                </div>
+                            </div> 
+                          
+                
+                        
+                
+                        </div>
+                      
+                    </div>
+
+                </section>
+
+            </div>
+
+		</main>
+
+	    <Footer />
+
+    </div>
+
+ 
+	<script src="../js/prism.min.js"></script>  
+	<script src="../js/script.js"></script>  
+	
+</body>
+</html>

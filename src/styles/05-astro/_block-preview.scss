@@ -1,0 +1,30 @@
+.block-preview {
+    .block-info {
+      margin-bottom: 2em;
+  
+      .block-main-title {
+        font-size: 1.8em;
+        color: #0053b3;
+        margin-bottom: 0.6em;
+        font-weight: 600;
+     //   border-bottom: 1px solid #d9dcde;
+        // padding-bottom: 0.4em;
+      }
+  
+      p {
+        margin: 2em 0;
+      }
+    }
+  
+    .block_example {
+      padding: 1.5rem;
+      margin-right: 0;
+      margin-left: 0;
+      border-width: 0.2rem;
+      background-color: $white;
+      margin-top: 1em;
+      border: 1px solid #e4e4e4;
+      border-bottom: 0;
+    }
+  }
+  

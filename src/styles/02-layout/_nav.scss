@@ -1,0 +1,87 @@
+// NAV
+.ds-header-nav {
+    width: 100%;
+
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center; 
+    }
+
+    ul {
+        list-style: none;
+
+        &.nav-ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding-left: 0;
+            margin: 0;
+
+            @media (min-width: 992px) {
+                flex-direction: row;
+                margin-right: 2rem;
+            }
+
+            .nav-li {
+                display: block;
+                margin: 0;
+                border-bottom: 1px solid #e5e4ed;
+
+                @media (min-width: 992px) {
+                    border: 0;
+                }
+
+                .nav-link-item {
+                    display: block;
+                    padding: 0.5rem 1rem;
+                    color: $grey-text;
+                    font-size: 1.1rem;
+                    line-height: 1.6;
+                    text-decoration: none;
+                    transition: color .15s ease-in-out,
+                                background-color .15s ease-in-out,
+                                border-color .15s ease-in-out;
+
+                    // &:hover,
+                    // &:focus {
+                    //     color: #0d6efd;  
+                    // }
+                    &.is-active,
+                    &:hover {
+                        color: $green-1;
+                      }
+                      &:focus {
+                        color: $green-1;
+                        outline: 1px solid $green-1;
+                      }
+
+                }
+            }
+        }
+        &.ul-nav-user {
+            margin-top: 1rem;
+            @media (min-width: 992px) {
+              display: flex;
+              justify-content: center; 
+              margin: 0;
+            }
+
+            li {
+                padding: 0.5rem 1rem;
+
+                @media (min-width: 992px) {
+                    padding: 0;
+                }
+
+                a {
+                    margin: 0;
+                    display: block;
+                    @media (min-width: 992px) {
+                        margin: 0.25rem 0.625rem 0.25rem 0;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,304 @@
+// Form Generale Style
+.ds-form,
+form {
+    
+    .input_gpr{
+        margin-bottom: 1.5rem;
+      label,
+      input {
+        display: block;
+        width: 100%;
+      }
+
+      label{
+        margin-bottom: 0.5rem;
+        font-family: $font-1;
+      } 
+
+      .error-message {
+        font-size: 0.77rem;
+        color: red;
+        margin: 10px 0;
+        display: block;
+        font-weight: 400;
+      }
+      
+    }
+
+    .input_gpr_radio {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+  
+    select,
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="range"],
+    input[type="date"],
+    input[type="search"] {
+
+      border: 2px solid #53657d;
+      border-radius: 4px;
+      padding: 0.6em 1em;
+      width: 100%;
+      //max-width: 540px;
+      transition: border 0.3s ease-in-out;
+      border-width: 2px !important;
+      height: 50px;
+      background-color: transparent;
+      font-family: $font-1;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: all 0.2s ease-out;
+  
+      &:focus {
+        @include focusInput;
+
+        box-shadow: none;
+        outline-width: 3px;
+        outline-style: solid;
+      }
+
+      &.input-error {
+        border-color: red;
+      }
+    }
+  
+    textarea {
+      border: 2px solid #53657d;
+      border-radius: 4px;
+      padding: 0.6em 1em;
+      box-sizing: border-box;
+      width: 100%; // commenté avant
+      background-color: transparent;
+      &:focus {
+        &:focus {
+          @include focusInput;
+  
+          box-shadow: none;
+          outline-width: 3px;
+          outline-style: solid;
+        }
+      }
+      &.input-error {
+        border-color: red;
+      }
+    }
+  
+    select {
+      background-color: $white;
+    }
+  }
+
+
+
+  
+  // Extend Style
+  
+
+  // NEW RADIO && CHECK
+  input[type="radio"],
+  input[type="checkbox"] {
+      appearance: none;
+      border: 2px solid #53657d;
+      border-radius: 5px;
+      color: $white;
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      margin-right: 1rem;
+      transition: 200ms ease-out;
+      vertical-align: top;
+
+
+      &:checked {
+          appearance: none;
+          background-color: #53657d;
+
+
+          &::before {
+            background: transparent !important;
+            color: $white;
+            font-size: 1.2em;
+            line-height: 1.3rem;
+            padding: 0px 4px;
+            @include fontello;
+            content: "\E801";
+          }
+      }
+
+    &:focus {
+        appearance: none;
+        outline: 2px solid rgb(60, 60, 105);
+        outline-offset: 2px;
+
+    }
+
+  }
+  input[type="radio"] {
+      border-radius: 15px;
+  }
+  
+  // Add Spinner
+  .active-spinner {
+    position: relative;
+  
+    label {
+      padding-left: 3.2em;
+    }
+  
+    .spinner_wrapper {
+      position: absolute;
+      top: 12px;
+      left: 13px;
+      height: 26px;
+      width: 26px;
+    }
+  }
+  
+  //
+  
+  .form-composite > .fieldset-wrapper > .description,
+  .form-item .description {
+    font-size: 0.85em;
+    margin-top: 1em;
+  }
+  
+  // Form Error
+  .form-item input.error,
+  .form-item textarea.error,
+  .form-item select.error {
+    border: 4px solid red !important;
+    background-color: #feeeee !important;
+  
+    &[type="checkbox"],
+    &[type="radio"] {
+      border: 2px solid red !important;
+      height: 32px;
+      width: 32px;
+      background: none !important;
+      box-shadow: none;
+      padding: 0;
+      border-radius: 4px;
+    }
+  }
+  
+  
+  
+  // FORM CONTAINER 
+  
+  // GESTION LAYOUT DES FORMULAIRES
+  .form_container {
+    .form_info {
+      margin-left: 5em;
+      margin-bottom: 3em;
+  
+      @include mq-max($tablet-small) {
+        margin-left: 2em;
+      }
+  
+      p {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5;
+        &:not(:first-child) {
+          margin-left: 1em;
+        }
+        span {
+          color: $teal-3;
+          font-weight: bold;
+        }
+      }
+    }
+    .form_field_ct {
+      margin: 3em 0 5em 5em;
+      max-width: 550px;
+  
+      @include mq-max($tablet-small) {
+        margin-left: 2em;
+      }
+    }
+    .input_grp {
+      margin-bottom: 1.6em;
+      &.input_grp_wmb {
+        margin-bottom: 0;
+      }
+      &.input_grp_block {
+        display: flex;
+        flex-direction: column;
+        .form-item {
+          margin-bottom: 0.5em;
+        }
+      }
+      .input_grp_sub {
+        margin-bottom: 0.8em;
+      }
+    }
+    .input_flex_ct {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .date_field {
+        &:first-of-type,
+        &:nth-child(2) {
+          margin-right: 2em;
+          position: relative;
+          &::after {
+            content: '/';
+            position: absolute;
+            top: 8px;
+            right: -20px;
+            font-size: 20px;
+          }
+        }
+      }
+      &.input_flex_sm {
+        @include mq-max($tablet-medium) {
+          align-items: flex-end;
+        }
+        .input_grp {
+          &:not(:nth-child(1)) {
+            margin-left: 0.8em;
+          }
+        }
+      }
+    }
+    // link
+    a {
+      color: $teal-3;
+      font-weight: bold;
+      text-decoration: underline;
+      padding: 0.85rem 0.5rem;
+    }
+  
+    // Error message
+    .content__message__alert {
+      margin-left: 7.5em;
+      margin-top: 3em;
+      ul {
+        &.messages__list {
+          .li-parent {
+            padding: 0;
+            margin: 0;
+            &::before {
+              content:"";
+              width:0;
+              height:0;
+            }
+            ul {
+              margin: 0;
+              padding: 0;
+            }
+  
+          }
+  
+        }
+      }
+    }
+  }
